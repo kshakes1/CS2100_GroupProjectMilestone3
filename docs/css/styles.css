@@ -1,10 +1,16 @@
-/* Google Fonts: Quicksand for body text and Pacifico for headings. */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
-/* For All The Dogs - Group Project Styles
-   External stylesheet using CSS Flexbox and responsive media queries.
-   Responsive layout targets: desktop, tablet, and mobile.
-*/
+/* =========================================
+   FOR ALL THE DOGS - GROUP PROJECT STYLES
+   Agency Proposal Color Palette
+
+   #C2B280 - Tan
+   #6D4F4D - Brown
+   #E6B44D - Gold
+   #FFF7E5 - Cream
+   #4E5B31 - Green
+   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -16,10 +22,10 @@ html {
 
 body {
     margin: 0;
-    font-family: "Quicksand", Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #2f2f2f;
-    background: #fff8f3;
+    color: #4E5B31;
+    background-color: #FFF7E5;
 }
 
 img {
@@ -28,47 +34,37 @@ img {
     height: auto;
 }
 
-.hero-image {
-    display: block;
-    width: min(100%, 360px);
-    max-width: 100%;
-    height: clamp(220px, 28vw, 320px);
-    aspect-ratio: 987 / 876;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 1rem;
-}
+/* =========================================
+   HEADER
+   ========================================= */
 
 header {
-    background-color: #f0eadd;
+    background-color: #C2B280;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-family: "Pacifico", cursive;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 700;
     font-size: clamp(2rem, 5vw, 3.25rem);
+    color: #6D4F4D;
 }
 
 header img {
-  display: block;
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-}
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
 nav {
-    background-color: #3a1f2a;
+    background-color: #6D4F4D;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -78,8 +74,9 @@ nav {
 }
 
 nav a {
-    color: #ffffff;
+    color: #FFF7E5;
     text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 700;
     padding: 0.65rem 1rem;
     border-radius: 0.5rem;
@@ -87,9 +84,13 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-    background: #f4b6c2;
-    color: #3a1f2a;
+    background-color: #E6B44D;
+    color: #4E5B31;
 }
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
 
 main {
     width: min(1100px, 92%);
@@ -99,17 +100,22 @@ main {
 
 main h2,
 main h3 {
-    color: #3a1f2a;
-    font-family: "Pacifico", cursive;
+    color: #6D4F4D;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
 
 .skip {
     position: absolute;
     left: -9999px;
     top: 0;
     z-index: 1000;
-    background: #ffffff;
-    color: #3a1f2a;
+    background-color: #FFF7E5;
+    color: #6D4F4D;
     padding: 0.75rem 1rem;
 }
 
@@ -118,34 +124,31 @@ main h3 {
     top: 1rem;
 }
 
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    background: #ffffff;
-    border-radius: 1rem;
-    box-shadow: 0 4px 16px rgba(58, 31, 42, 0.1);
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
 }
 
-.hero-content {
-    flex: 1 1 55%;
-    min-width: 0;
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+    color: #6D4F4D;
 }
 
-.hero-image {
-    flex: 0 1 360px;
-    width: min(100%, 360px);
-    max-width: 100%;
-    height: clamp(220px, 28vw, 320px);
-    aspect-ratio: 987 / 876;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 1rem;
-    image-rendering: auto;
+a:focus-visible {
+    outline: 3px solid #4E5B31;
+    outline-offset: 3px;
 }
+
+/* =========================================
+   FEATURE AND VALUE LISTS
+   ========================================= */
 
 .feature-list,
 .value-list {
@@ -160,49 +163,61 @@ main h3 {
 .value-list li {
     flex: 1 1 220px;
     padding: 1rem;
-    background: #ffffff;
+    background-color: #FFF7E5;
     border-radius: 0.75rem;
-    box-shadow: 0 2px 10px rgba(58, 31, 42, 0.08);
+    box-shadow: 0 2px 10px rgba(78, 91, 49, 0.12);
 }
+
+/* =========================================
+   CALL TO ACTION
+   ========================================= */
 
 .cta {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.8rem 1.1rem;
-    background: #3a1f2a;
-    color: #ffffff;
+    background-color: #6D4F4D;
+    color: #FFF7E5;
     border-radius: 0.5rem;
     text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
 
 .cta:hover,
 .cta:focus-visible {
-    background: #5a3042;
+    background-color: #4E5B31;
+    color: #FFF7E5;
 }
 
-.team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+/* =========================================
+   TEAM MEMBERS
+   ========================================= */
 
 .team-member {
-    flex: 1 1 220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    align-items: baseline;
     padding: 1rem;
-    background: #ffffff;
-    border-left: 5px solid #f4b6c2;
+    background-color: #FFF7E5;
+    border-left: 5px solid #E6B44D;
     border-radius: 0.75rem;
 }
 
-.team-member h3,
+.team-member h3 {
+    flex: 0 0 auto;
+    color: #6D4F4D;
+}
+
 .team-member p {
+    flex: 1 1 140px;
     margin: 0.25rem 0;
 }
 
-.package-section {
-    margin-bottom: 2rem;
-}
+/* =========================================
+   SERVICE CARDS
+   ========================================= */
 
 .package-grid {
     display: flex;
@@ -214,8 +229,8 @@ main h3 {
     flex: 1 1 300px;
     min-width: 0;
     padding: 1rem;
-    background: #ffffff;
-    border: 2px solid #f0d8df;
+    background-color: #FFF7E5;
+    border: 2px solid #C2B280;
     border-radius: 0.75rem;
 }
 
@@ -236,39 +251,46 @@ main h3 {
 
 .service-desc {
     flex-basis: 100%;
-    color: #555555;
+    color: #4E5B31;
 }
 
-.contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+/* =========================================
+   CONTACT INFORMATION
+   ========================================= */
+
+#main-content address {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #FFF7E5;
+    border-left: 4px solid #E6B44D;
+    font-style: normal;
 }
 
-.contact-card {
-    flex: 1 1 300px;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 10px rgba(58, 31, 42, 0.08);
+#main-content > h2 {
+    margin-top: 1.75rem;
 }
 
-.review-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+#main-content > h2:first-child {
+    margin-top: 0;
 }
+
+/* =========================================
+   REVIEW SECTION
+   ========================================= */
 
 .review-bubble {
-    flex: 1 1 420px;
     padding: 1.5rem;
-    background: #ffffff;
+    background-color: #FFF7E5;
     border-radius: 1rem;
-    box-shadow: 0 4px 14px rgba(58, 31, 42, 0.1);
+    box-shadow: 0 4px 14px rgba(78, 91, 49, 0.15);
 }
 
 .review-stars {
-    color: #c78b00;
+    /*
+       Darkened star color for better WCAG contrast.
+       #4E5B31 provides strong contrast against #FFF7E5.
+    */
+    color: #4E5B31;
     font-size: 1.25rem;
     letter-spacing: 0.15rem;
 }
@@ -281,63 +303,72 @@ main h3 {
     font-weight: 700;
 }
 
+/* =========================================
+   FOOTER
+   ========================================= */
+
 footer {
     min-height: 70px;
     margin-top: 2rem;
     padding: 1.5rem;
     text-align: center;
-    background: #3a1f2a;
+
+    /* Dark background */
+    background-color: #6D4F4D;
+
+    /* Light text for readability */
+    color: #FFF7E5;
 }
 
-/* Tablet: stack the hero and allow navigation links to wrap. */
+footer p,
+footer h2,
+footer h3 {
+    color: #FFF7E5;
+}
+
+footer a {
+    color: #FFF7E5;
+    text-decoration: underline;
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
 @media (max-width: 768px) {
+
     main {
         width: 90%;
     }
 
-    .hero-image {
-        width: min(100%, 450px);
-        margin-left: auto;
-        margin-right: auto;
+    nav {
+        gap: 1rem;
+    }
+
+    .package-grid {
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 100%;
     }
 }
 
+/* =========================================
+   MOBILE
+   ========================================= */
+
 @media (max-width: 600px) {
+
     main {
         width: 94%;
         padding: 1.5rem 0;
     }
 
     nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    }
-
-    .hero-image {
-        width: 100%;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .feature-list,
-    .value-list,
-    .package-grid,
-    .team,
-    .contact-grid,
-    .review-list {
         flex-direction: column;
-    }
-
-    .feature-list li,
-    .value-list li,
-    .service-card,
-    .team-member,
-    .contact-card,
-    .review-bubble {
-        flex-basis: auto;
-        width: 100%;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     nav a {
@@ -345,8 +376,24 @@ footer {
         text-align: center;
     }
 
+    .feature-list,
+    .value-list,
+    .package-grid {
+        flex-direction: column;
+    }
+
+    .feature-list li,
+    .value-list li,
+    .service-card {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .team-member {
+        width: 100%;
+    }
+
+    .review-bubble {
+        width: 100%;
+    }
 }
-
-    
-
-
